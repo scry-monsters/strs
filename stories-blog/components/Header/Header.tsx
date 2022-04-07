@@ -18,7 +18,7 @@ const Header = () => {
 					<Image
 						className={classes.imageItself}
 						src={headerPhotoMe}
-						alt="Me in ram world"
+						alt="Me in ram worldo"
 					/>
 				</div>
 				<div
