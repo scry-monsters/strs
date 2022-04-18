@@ -5,10 +5,13 @@ import { RootState } from "../store";
 
 const initialState : StoryState = {
     loading: false,
-    error: null
+    error: null,
+    totalCount: 0,
+    perPage : 10,
+    currentPage: 0
 }
 
-const storiesAdapter = createEntityAdapter<Story>();
+const storiesAdapter = createEntityAdapter<StoryState>();
 export const storiesSelector = storiesAdapter.getSelectors(
     (state: RootState) => state.stories
 )

@@ -48,7 +48,7 @@ const NavBar = () => {
 		<AppBar position="static" className={classes.appBar}>
 			<Container maxWidth="xl">
 				<Toolbar disableGutters>
-					<Link href="#" passHref>
+					<Link href="/" passHref>
 						<Typography
 							variant="h6"
 							noWrap
@@ -99,11 +99,13 @@ const NavBar = () => {
 								<MenuItem key={page} onClick={handleCloseNavMenu}>
 									<Typography textAlign="center" className={classes.navBarText}>
 										{page !== "Source" ? (
-											page
+											<>
+												<Link href="/about">{page}</Link>
+											</>
 										) : (
 											<>
 												{page}{" "}
-												<a href="https://github.com/scry-monsters">
+												<a href="https://github.com/scry-monsters/strs">
 													<GitHubIcon />
 												</a>
 											</>
@@ -137,12 +139,12 @@ const NavBar = () => {
 							>
 								{page !== "Source" ? (
 									<>
-										<Link href="#header" passHref>
+										<Link href="/about" passHref>
 											<Nav.Link style={{ color: "black" }}>{page}</Nav.Link>
 										</Link>
 									</>
 								) : (
-									<Link href="https://github.com/scry-monsters" passHref>
+									<Link href="https://github.com/scry-monsters/strs" passHref>
 										<Nav.Link style={{ color: "black" }}>
 											{page} <GitHubIcon />
 										</Nav.Link>
@@ -150,36 +152,6 @@ const NavBar = () => {
 								)}
 							</Button>
 						))}
-					</Box>
-
-					<Box sx={{ flexGrow: 0 }}>
-						<Tooltip title="Open settings">
-							<IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-								<Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-							</IconButton>
-						</Tooltip>
-						<Menu
-							sx={{ mt: "45px" }}
-							id="menu-appbar"
-							anchorEl={anchorElUser}
-							anchorOrigin={{
-								vertical: "top",
-								horizontal: "right",
-							}}
-							keepMounted
-							transformOrigin={{
-								vertical: "top",
-								horizontal: "right",
-							}}
-							open={Boolean(anchorElUser)}
-							onClose={handleCloseUserMenu}
-						>
-							{settings.map((setting) => (
-								<MenuItem key={setting} onClick={handleCloseUserMenu}>
-									<Typography textAlign="center">{setting}</Typography>
-								</MenuItem>
-							))}
-						</Menu>
 					</Box>
 				</Toolbar>
 			</Container>

@@ -15,6 +15,8 @@ import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { StoryItself } from "../../types/stories";
+import Image from "next/image";
+import userLogo from "../../images/userLogo.jpg";
 
 const ExpandMore = styled((props) => {
 	const { expand, ...other } = props;
@@ -42,7 +44,7 @@ const StoryCard: React.FC<Props> = ({ data }) => {
 			<CardHeader
 				avatar={
 					<Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-						R
+						<Image src={userLogo} alt="my personal profile picture" />
 					</Avatar>
 				}
 				action={
@@ -50,19 +52,12 @@ const StoryCard: React.FC<Props> = ({ data }) => {
 						<MoreVertIcon />
 					</IconButton>
 				}
-				title={"Scry Monsters"}
+				title={"scry"}
 				subheader="September 14, 2016"
 			/>
-			<CardMedia
-				component="img"
-				height="194"
-				image={`${data.art}`}
-				alt="Paella dish"
-			/>
+			<Image src={data.art} alt="Paella dish" width="400" height="200" />
 			<CardContent>
-				<Typography variant="body2" color="text.secondary">
-					{data.title}
-				</Typography>
+				<h2>{data.title}</h2>
 			</CardContent>
 			<CardActions disableSpacing>
 				<IconButton aria-label="add to favorites">

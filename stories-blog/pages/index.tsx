@@ -1,19 +1,23 @@
 import type { NextPage } from "next";
 import Header from "../components/Header/Header";
 import "bootstrap/dist/css/bootstrap.css";
-import NavBar from "../components/Navbar/NavBar";
-import Footer from "../components/Footer/Footer";
 import Stories from "../components/Stories/Stories";
+import Head from "next/head";
 
 const Home: NextPage = () => {
 	return (
 		<div>
-			<NavBar />
+			<Head>
+				<title>strs</title>
+				<meta name="keywords" content="scry monsters, stories, blog" />
+			</Head>
 			<Header />
 			<Stories />
-			<Footer />
 		</div>
 	);
 };
 
+// export const getStaticProps = async () => {
+
+// }
 export default Home;
