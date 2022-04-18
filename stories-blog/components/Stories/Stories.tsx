@@ -38,7 +38,7 @@ const Stories = () => {
 			{loading && currentStories.length === 0 ? (
 				<div className={classes.loadingDiv}>
 					<h1>
-						Seems we have a server error :( let&apos;s have a rain check on this
+						Seems we have a server error :( let&apos;s put a rain check on this
 						chat
 					</h1>
 				</div>
