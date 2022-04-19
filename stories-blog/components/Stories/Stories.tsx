@@ -26,7 +26,7 @@ const Stories = () => {
 	const indexOfFirstStory = indexOfLastStory - storiesPerPage;
 	const currentStories = stories.slice(indexOfFirstStory, indexOfLastStory);
 
-	const paginate = (pageNumber: number) => {
+	const paginate = (pageNumber: number): any => {
 		setCurrentStory(pageNumber);
 	};
 

@@ -18,7 +18,7 @@ const Header = () => {
 					<Image
 						className={classes.imageItself}
 						src={headerPhotoMe}
-						alt="Me in ram worldo"
+						alt="Me in ram world"
 					/>
 				</div>
 				<div
@@ -26,8 +26,8 @@ const Header = () => {
 				>
 					<h3>Hey</h3>
 					<h5>
-						glad you made it here, its been a while since we talked. hope you'll
-						enjoy my stories.
+						glad you made it here, its been a while since we talked. hope
+						you&apos;ll enjoy my stories.
 					</h5>
 				</div>
 			</div>

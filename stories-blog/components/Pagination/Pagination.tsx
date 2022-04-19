@@ -5,7 +5,7 @@ import Stack from "@mui/material/Stack";
 interface Props {
 	storiesPerPage: number;
 	totalStories: number;
-	paginate: number;
+	paginate: (num: number) => number;
 }
 const PaginationItem: React.FC<Props> = ({
 	storiesPerPage,

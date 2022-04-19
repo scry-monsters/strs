@@ -9,7 +9,4 @@ art: string
 export type StoryState = {
     loading: boolean
     error: null | undefined | string
-    totalCount: number
-    perPage : number
-    currentPage: number
 }

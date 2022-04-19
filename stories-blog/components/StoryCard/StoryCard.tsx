@@ -1,5 +1,4 @@
 import * as React from "react";
-import { styled } from "@mui/material/styles";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
@@ -12,33 +11,16 @@ import Typography from "@mui/material/Typography";
 import { red } from "@mui/material/colors";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { StoryItself } from "../../types/stories";
 import Image from "next/image";
 import userLogo from "../../images/userLogo.jpg";
-
-const ExpandMore = styled((props) => {
-	const { expand, ...other } = props;
-	return <IconButton {...other} />;
-})(({ theme, expand }) => ({
-	transform: !expand ? "rotate(0deg)" : "rotate(180deg)",
-	marginLeft: "auto",
-	transition: theme.transitions.create("transform", {
-		duration: theme.transitions.duration.shortest,
-	}),
-}));
 
 type Props = {
 	data: StoryItself;
 };
 
 const StoryCard: React.FC<Props> = ({ data }) => {
-	const [expanded, setExpanded] = React.useState(false);
-	const handleExpandClick = () => {
-		setExpanded(!expanded);
-	};
-
 	return (
 		<Card style={{ width: "90%" }}>
 			<CardHeader
@@ -66,16 +48,8 @@ const StoryCard: React.FC<Props> = ({ data }) => {
 				<IconButton aria-label="share">
 					<ShareIcon />
 				</IconButton>
-				<ExpandMore
-					expand={expanded}
-					onClick={handleExpandClick}
-					aria-expanded={expanded}
-					aria-label="show more"
-				>
-					<ExpandMoreIcon />
-				</ExpandMore>
 			</CardActions>
-			<Collapse in={expanded} timeout="auto" unmountOnExit>
+			<Collapse timeout="auto" unmountOnExit>
 				<CardContent>
 					<Typography paragraph>{data.storyItself}</Typography>
 				</CardContent>

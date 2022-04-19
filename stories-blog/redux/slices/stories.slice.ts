@@ -1,17 +1,14 @@
 import { createAsyncThunk, createEntityAdapter, createSlice } from "@reduxjs/toolkit";
-import { StoryState } from "../../types/stories";
+import { StoryState, StoryItself } from "../../types/stories";
 import $api from "../../utils/axios";
 import { RootState } from "../store";
 
 const initialState : StoryState = {
     loading: false,
     error: null,
-    totalCount: 0,
-    perPage : 10,
-    currentPage: 0
 }
 
-const storiesAdapter = createEntityAdapter<StoryState>();
+const storiesAdapter = createEntityAdapter<StoryItself>();
 export const storiesSelector = storiesAdapter.getSelectors(
     (state: RootState) => state.stories
 )
