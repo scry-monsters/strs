@@ -15,7 +15,7 @@ const Footer = () => {
 				<div className="row">
 					<div className="col-6  pt-3">
 						<p>
-							ONE MORE THING! If you have any stories of your own, please
+							ONE MORE THING! <br /> If you have any stories of your own, please
 							don&apos;t hesitate to write me on any of my social media
 							platforms.
 						</p>

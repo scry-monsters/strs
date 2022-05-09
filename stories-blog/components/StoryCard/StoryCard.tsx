@@ -15,7 +15,8 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { StoryItself } from "../../types/stories";
 import Image from "next/image";
 import userLogo from "../../images/userLogo.jpg";
-
+import construction from "../../images/photo.png";
+import Link from "next/link";
 type Props = {
 	data: StoryItself;
 };
@@ -37,10 +38,18 @@ const StoryCard: React.FC<Props> = ({ data }) => {
 				title={"scry"}
 				subheader="September 14, 2016"
 			/>
-			<Image src={data.art} alt="Paella dish" width="400" height="200" />
-			<CardContent>
-				<h2>{data.title}</h2>
-			</CardContent>
+			<Link href={`/story/${data.id}`} passHref>
+				<Image
+					src={construction}
+					alt="Paella dish"
+					style={{ backgroundFill: "fill" }}
+				/>
+			</Link>
+			<Link href={`/story/${data.id}`} passHref>
+				<CardContent>
+					<h2>{data.title}</h2>
+				</CardContent>
+			</Link>
 			<CardActions disableSpacing>
 				<IconButton aria-label="add to favorites">
 					<FavoriteIcon />
