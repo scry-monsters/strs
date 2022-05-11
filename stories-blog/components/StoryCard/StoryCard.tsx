@@ -47,17 +47,9 @@ const StoryCard: React.FC<Props> = ({ data }) => {
 			</Link>
 			<Link href={`/story/${data.id}`} passHref>
 				<CardContent>
-					<h2>{data.title}</h2>
+					<h2 className="text-center">{data.title}</h2>
 				</CardContent>
 			</Link>
-			<CardActions disableSpacing>
-				<IconButton aria-label="add to favorites">
-					<FavoriteIcon />
-				</IconButton>
-				<IconButton aria-label="share">
-					<ShareIcon />
-				</IconButton>
-			</CardActions>
 			<Collapse timeout="auto" unmountOnExit>
 				<CardContent>
 					<Typography paragraph>{data.storyItself}</Typography>

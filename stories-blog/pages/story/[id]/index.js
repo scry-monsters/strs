@@ -2,7 +2,12 @@ import React from "react";
 import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
 
 const story = ({ story }) => {
-	return <div>{story.title}</div>;
+	return <div className="container" style={{height: "70vh"}}>
+    <div className="text-center" style={{width: "100%"}}>
+        <h1>{story.title}</h1>
+        <h3>{story.storyItself}</h3>
+    </div>
+    </div>;
 };
 
 export const getStaticProps = async (context) => {
