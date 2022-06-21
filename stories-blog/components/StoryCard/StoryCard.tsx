@@ -39,11 +39,7 @@ const StoryCard: React.FC<Props> = ({ data }) => {
 				subheader="September 14, 2016"
 			/>
 			<Link href={`/story/${data.id}`} passHref>
-				<Image
-					src={construction}
-					alt="Paella dish"
-					style={{ backgroundFill: "fill" }}
-				/>
+				<Image src={construction} alt="Paella dish" />
 			</Link>
 			<Link href={`/story/${data.id}`} passHref>
 				<CardContent>
