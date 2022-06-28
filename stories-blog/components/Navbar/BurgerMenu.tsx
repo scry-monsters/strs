@@ -3,6 +3,7 @@ import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import Link from "next/link";
 
 const options = ["Source", "LinkedIn", "IG"];
 
@@ -45,15 +46,16 @@ export default function BurgerMenu() {
 					},
 				}}
 			>
-				{options.map((option) => (
-					<MenuItem
-						key={option}
-						selected={option === "Pyxis"}
-						onClick={handleClose}
-					>
-						{option}
+				<Link href="https://github.com/scry-monsters/strs">
+					<MenuItem key="Source" selected={false} onClick={handleClose}>
+						Source Code
 					</MenuItem>
-				))}
+				</Link>
+				<Link href="https://www.linkedin.com/in/scry/">
+					<MenuItem key="Source" selected={false} onClick={handleClose}>
+						LinkedIn
+					</MenuItem>
+				</Link>
 			</Menu>
 		</div>
 	);

@@ -36,7 +36,7 @@ const StoryCard: React.FC<Props> = ({ data }) => {
 					</IconButton>
 				}
 				title={"scry"}
-				subheader="September 13, 2016"
+				subheader="September 14, 2016"
 			/>
 			<Link href={`/story/${data.id}`} passHref>
 				<Image src={construction} alt="Paella dish" />
