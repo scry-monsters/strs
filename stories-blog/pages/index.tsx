@@ -21,6 +21,7 @@ const Home: NextPage = ({ stories }: any) => {
 export const getStaticProps = async () => {
 	const res = await fetch(`${API_URL}/api/stories`);
 	const stories = await res.json();
+
 	return {
 		props: {
 			stories,

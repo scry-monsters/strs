@@ -41,11 +41,9 @@ const StoryCard: React.FC<Props> = ({ data }) => {
 			<Link href={`/story/${data.id}`} passHref>
 				<Image src={construction} alt="Paella dish" />
 			</Link>
-			<Link href={`/story/${data.id}`} passHref>
-				<CardContent>
-					<h2 className="text-center">{data.title}</h2>
-				</CardContent>
-			</Link>
+			<CardContent>
+				<h2 className="text-center">{data.title}</h2>
+			</CardContent>
 			<Collapse timeout="auto" unmountOnExit>
 				<CardContent>
 					<Typography paragraph>{data.storyItself}</Typography>

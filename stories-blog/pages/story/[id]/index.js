@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { API_URL } from "../../../utils/constants";
+import personalStory from "../../api/stories/[id]";
 
 const story = ({ story }) => {
 	return <div className="container">
@@ -12,14 +13,12 @@ const story = ({ story }) => {
     </div>;
 };
 
-export const getStaticProps = async (context) => {
-    const res = await fetch(`${API_URL}/api/stories/${context.params.id}`)
-  
-    const story = await res.json()
-  
+export const getStaticProps = async (context) => {  
+    const res = await fetch(`${API_URL}/api/stories/${context.params.id}`);
+    const story = await res.json();
     return {
       props: {
-        story,
+        story
       },
     }
   }
