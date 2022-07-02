@@ -38,7 +38,7 @@ const StoryCard: React.FC<Props> = ({ data }) => {
 				title={"scry"}
 			/>
 			<Link href={`/story/${data.id}`} passHref>
-				<Image src={construction} alt="Paella dish" />
+				<Image src={construction} alt="Story art" />
 			</Link>
 			<CardContent>
 				<h2 className="text-center">{data.title}</h2>

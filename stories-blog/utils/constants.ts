@@ -1,4 +1,2 @@
-const port = process.env.PORT || 3000;
-console.log(port)
-export const API_URL = `http://localhost:${port}`;
-console.log(API_URL)
+const dev = process.env.NODE_ENV !== 'production'
+export const API_URL = dev ? 'http://localhost:3000' : process.env.NODE_ENV

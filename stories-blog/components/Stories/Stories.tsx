@@ -19,12 +19,12 @@ const Stories: React.FC<Props> = ({ stories }) => {
 					classes.card__container
 				)}
 			>
-				{stories.map((item: any) => (
+				{stories.map((data: any) => (
 					<div
 						className="col-lg-4 col-md-6 col-12 py-5 justify-content-center align-items-center d-flex"
-						key={item.id}
+						key={data.id}
 					>
-						<StoryCard data={item} />
+						<StoryCard data={data} />
 					</div>
 				))}
 			</div>
